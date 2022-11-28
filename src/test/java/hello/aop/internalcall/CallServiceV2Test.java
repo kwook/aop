@@ -10,13 +10,17 @@ import org.springframework.context.annotation.Import;
 @Slf4j
 @Import(CallLogAspect.class)
 @SpringBootTest
-class CallServiceV1Test {
+class CallServiceV2Test {
 
-    @Autowired
-    CallServiceV1 callServiceV1;
+    CallServiceV2 callServiceV2;
 
     @Test
     void external() {
-        callServiceV1.external();
+        callServiceV2.external();
+    }
+
+    @Test
+    void internal() {
+        callServiceV2.internal();
     }
 }
